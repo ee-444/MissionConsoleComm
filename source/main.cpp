@@ -4,7 +4,7 @@
  *
  *	This class is part of the Peripheral Library collection 
  *	for the Arduino Mars Rover project.  The source code is 
- *	downloadable from xxxxxxxxxxxx.
+ *	downloadable from https://github.com/ee-444/MissionConsoleComm
  *
  * @section install_sec Bugs
  *
