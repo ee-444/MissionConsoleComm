@@ -40,7 +40,7 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
 INCLUDES = -I"B:\atmel_projects\MissionControlComm\library" -I"B:\atmel_projects\MissionControlComm\source" 
 
 ## Objects that must be built in order to link
-OBJECTS = main.o MissionControl.o 
+OBJECTS = main.o MissionConsole.o 
 
 ## Objects explicitly added by the user
 LINKONLYOBJECTS = 
@@ -52,7 +52,7 @@ all: $(TARGET) MissionConsoleComm.hex MissionConsoleComm.eep MissionConsoleComm.
 main.o: ../source/main.cpp
 	$(CPP) $(INCLUDES) $(CFLAGS) -c  $<
 
-MissionControl.o: ../source/MissionControl.cpp
+MissionConsole.o: ../source/MissionConsole.cpp
 	$(CPP) $(INCLUDES) $(CFLAGS) -c  $<
 
 ##Link

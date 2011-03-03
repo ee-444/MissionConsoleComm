@@ -17,7 +17,7 @@ main.o: ../source/main.cpp \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/avr/fuse.h \
  c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../../../../avr/include/avr/lock.h \
  B:\atmel_projects\MissionControlComm\library/ArduinoPins.h \
- B:\atmel_projects\MissionControlComm\source/MissionControl.h
+ B:\atmel_projects\MissionControlComm\source/MissionConsole.h
 
 B:\atmel_projects\MissionControlComm\library/ArduinoLib.h:
 
@@ -55,4 +55,4 @@ c:\program\ files\atmel\avr\ tools\avr\ toolchain\bin\../lib/gcc/avr/4.4.3/../..
 
 B:\atmel_projects\MissionControlComm\library/ArduinoPins.h:
 
-B:\atmel_projects\MissionControlComm\source/MissionControl.h:
+B:\atmel_projects\MissionControlComm\source/MissionConsole.h:

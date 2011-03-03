@@ -1,9 +1,9 @@
 var NAVTREE =
 [
-  [ "MissionControlCommunication", "index.html", [
+  [ "Mission Console Communication", "index.html", [
     [ "MainPage for the Mission Console class!", "index.html", null ],
     [ "Class List", "annotated.html", [
-      [ "ArduinoLibrary::Cmissioncontrol", "classArduinoLibrary_1_1Cmissioncontrol.html", null ]
+      [ "ArduinoLibrary::Cmissionconsole", "classArduinoLibrary_1_1Cmissionconsole.html", null ]
     ] ],
     [ "Class Index", "classes.html", null ],
     [ "Class Members", "functions.html", null ],
@@ -14,7 +14,7 @@ var NAVTREE =
     [ "File List", "files.html", [
       [ "ArduinoLib.h", "ArduinoLib_8h.html", null ],
       [ "ArduinoPins.h", "ArduinoPins_8h.html", null ],
-      [ "MissionControl.h", "MissionControl_8h.html", null ]
+      [ "MissionConsole.h", "MissionConsole_8h.html", null ]
     ] ],
     [ "Examples", "examples.html", [
       [ "main.cpp", "main_8cpp-example.html", null ]

@@ -2,11 +2,11 @@
 
 /**  
 
-  * @file MissionControl.h  
-  * The header file for class Cmissioncontrol.  This is a class to handle communication
-  * with the host PC running the MissionControl software
+  * @file MissionConsole.h  
+  * The header file for class Cmissionconsole.  This is a class to handle communication
+  * with the host PC running the MissionConsole software
   *  
-  * @brief This file contains the class resources for Cmissioncontrol - communication software 
+  * @brief This file contains the class resources for Cmissionconsole - communication software 
   *  
   * @author sgrove   
   *
@@ -16,8 +16,8 @@
 
 // $Log$ 
 
-#ifndef MISSIONCONTROL_H
-#define MISSIONCONTROL_H
+#ifndef MISSIONCONSOLE_H
+#define MISSIONCONSOLE_H
 
 #include "ArduinoLib.h"
 
@@ -31,7 +31,7 @@
 namespace ArduinoLibrary{
 
 //! Mission Console communication class definition
-class Cmissioncontrol{
+class Cmissionconsole{
 
 private:
 	// functions that are used for transmitting
@@ -41,14 +41,14 @@ private:
 public:
  	
 	/**  
-    	This is the default constructor for the Cmissioncontrol class.
+    	This is the default constructor for the Cmissionconsole class.
   	*/ 
-	Cmissioncontrol();
+	Cmissionconsole();
 
 	/**  
-    	This is the default deconstructor for the Cmissioncontrol class.
+    	This is the default deconstructor for the Cmissionconsole class.
   	*/ 
-	~Cmissioncontrol();	
+	~Cmissionconsole();	
 
 	/**  
     	Used to enable communication.  This must be called before any transmitting

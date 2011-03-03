@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Mission Console Communication: ArduinoLib.h File Reference</title>
+<title>Mission Console Communication: MissionConsole.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -75,38 +75,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('ArduinoLib_8h.html','');
+  initNavTree('MissionConsole_8h.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<h1>ArduinoLib.h File Reference</h1>  </div>
+<h1>MissionConsole.h</h1>  </div>
 </div>
 <div class="contents">
-
-<p>This file contains the namespace inplementation and header file collection that is needed for easy project incorporation and management.  
-<a href="#_details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
-<code>#include &lt;stdlib.h&gt;</code><br/>
-<code>#include &lt;string.h&gt;</code><br/>
-<code>#include &lt;math.h&gt;</code><br/>
-<code>#include &lt;avr/io.h&gt;</code><br/>
-<code>#include &quot;<a class="el" href="ArduinoPins_8h_source.html">ArduinoPins.h</a>&quot;</code><br/>
-<code>#include &quot;MissionConsole.h&quot;</code><br/>
-</div>
-<p><a href="ArduinoLib_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-</table>
-<hr/><a name="_details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>This file contains the namespace inplementation and header file collection that is needed for easy project incorporation and management. </p>
-<p>The header file for namespace and global includes when using <a class="el" href="namespaceArduinoLibrary.html" title="scope for peripheral library driver software">ArduinoLibrary</a> and its collective sources.</p>
-<dl class="author"><dt><b>Author:</b></dt><dd>sgrove</dd></dl>
-<dl class="version"><dt><b>Version:</b></dt><dd>1.01 </dd></dl>
-</div></div>
+<a href="MissionConsole_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// $Id$  </span>
+<a name="l00002"></a>00002 
+<a name="l00017"></a>00017 <span class="comment">// $Log$ </span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="preprocessor">#ifndef MISSIONCONSOLE_H</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span><span class="preprocessor">#define MISSIONCONSOLE_H</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;ArduinoLib.h&quot;</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="preprocessor">#ifndef FOSC</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#define FOSC 16000000 // Clock Speed</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#define UART_BAUD          57600</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="preprocessor">#define REG_BAUD_VAL       FOSC/16/UART_BAUD-1</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span>
+<a name="l00031"></a>00031 <span class="keyword">namespace </span>ArduinoLibrary{
+<a name="l00032"></a>00032 
+<a name="l00034"></a><a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html">00034</a> <span class="keyword">class </span><a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html" title="Mission Console communication class definition.">Cmissionconsole</a>{
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="keyword">private</span>:
+<a name="l00037"></a>00037          <span class="comment">// functions that are used for transmitting</span>
+<a name="l00038"></a>00038          <span class="keywordtype">void</span> write(<span class="keywordtype">char</span>*);
+<a name="l00039"></a>00039          <span class="keywordtype">void</span> write(uint8_t);
+<a name="l00040"></a>00040          
+<a name="l00041"></a>00041 <span class="keyword">public</span>:
+<a name="l00042"></a>00042          
+<a name="l00046"></a>00046          <a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html#afe2c17883ed6bcc356f03be1f56c0fe2">Cmissionconsole</a>();
+<a name="l00047"></a>00047 
+<a name="l00051"></a>00051          <a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html#a297ca4172d42fc5f2db5396682d2bde4">~Cmissionconsole</a>();        
+<a name="l00052"></a>00052 
+<a name="l00057"></a>00057          <span class="keywordtype">void</span> <a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html#ab9c5813b2835ed78f858ef67eaa59fce">enable</a>();
+<a name="l00058"></a>00058 
+<a name="l00063"></a>00063          <span class="keywordtype">void</span> <a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html#aee20b035c3367842e8a913323fde1a74">disable</a>();
+<a name="l00064"></a>00064          
+<a name="l00071"></a>00071          <span class="keywordtype">void</span> <a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html#a7f5293f570c183b5acd5cb78c76f4c18">adValue</a>(uint16_t in);
+<a name="l00072"></a>00072 
+<a name="l00078"></a>00078          <span class="keywordtype">void</span> <a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html#a2a340433b1759feb6fd07d765d48e7b1">longRangeIR</a>(uint16_t in);
+<a name="l00079"></a>00079 
+<a name="l00085"></a>00085          <span class="keywordtype">void</span> <a class="code" href="classArduinoLibrary_1_1Cmissionconsole.html#ae97b0895e396a2cc1c7219829e4673b0">mediumRangeIR</a>(uint16_t in);
+<a name="l00086"></a>00086                   
+<a name="l00087"></a>00087          
+<a name="l00088"></a>00088 };
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 };       <span class="comment">// end of namespace</span>
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="preprocessor">#endif</span>
+</pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="ArduinoLib_8h.html">ArduinoLib.h</a>      </li>
+      <li class="navelem"><a class="el" href="MissionConsole_8h.html">MissionConsole.h</a>      </li>
       <li class="footer">Generated on Wed Mar 2 2011 16:57:22 for Mission Console Communication by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </li>

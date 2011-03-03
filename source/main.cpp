@@ -15,13 +15,13 @@
 
 
 /** @example main.cpp
- * This is an example of how to use the ArduinoLibrary::Cmissioncontrol class.
+ * This is an example of how to use the ArduinoLibrary::Cmissionconsole class.
  */
 
 #include "ArduinoLib.h"
 
 // declare the mission console object
-ArduinoLibrary::Cmissioncontrol mission_console;
+ArduinoLibrary::Cmissionconsole mission_console;
 
 int main (void)
 {
@@ -51,5 +51,5 @@ int main (void)
 	}
 
 	// deconstruct the object
-	mission_console.~Cmissioncontrol();
+	mission_console.~Cmissionconsole();
 }

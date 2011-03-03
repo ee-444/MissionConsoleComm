@@ -1,9 +1,9 @@
 
-#include "MissionControl.h"
+#include "MissionConsole.h"
 
 namespace ArduinoLibrary{
 
-Cmissioncontrol::Cmissioncontrol()
+Cmissionconsole::Cmissionconsole()
 {
 	// set the baud rate
 	UBRR0 = REG_BAUD_VAL;
@@ -11,29 +11,29 @@ Cmissioncontrol::Cmissioncontrol()
 	UCSR0C = 6;
 }
 
-Cmissioncontrol::~Cmissioncontrol()
+Cmissionconsole::~Cmissionconsole()
 {
 
 }
 
-void Cmissioncontrol::enable()
+void Cmissionconsole::enable()
 {
 	// enable interrupts??  definately TX AND RX enable
 	UCSR0B = 0x18;
 }
 
-void Cmissioncontrol::disable()
+void Cmissionconsole::disable()
 {
 	// disable the UART tx and rx
 	UCSR0B = 0;
 }
 
-void Cmissioncontrol::write(uint8_t in)
+void Cmissionconsole::write(uint8_t in)
 {
 	//UDR0 = in;
 }
 
-void Cmissioncontrol::write(char* in)
+void Cmissionconsole::write(char* in)
 {
 	while (*in != 0x00){
 		while ( !( UCSR0A & (1<<5)) );
@@ -42,7 +42,7 @@ void Cmissioncontrol::write(char* in)
 	}
 }
 
-void Cmissioncontrol::adValue(uint16_t in)
+void Cmissionconsole::adValue(uint16_t in)
 {
 	char* tmp = (char*)calloc(64, sizeof(char));
 	char* tmp_base = tmp;
@@ -58,7 +58,7 @@ void Cmissioncontrol::adValue(uint16_t in)
 	free(tmp_base);
 }
 
-void Cmissioncontrol::longRangeIR(uint16_t in)
+void Cmissionconsole::longRangeIR(uint16_t in)
 {
 	char* tmp = (char*)calloc(64, sizeof(char));
 	char* tmp_base = tmp;
@@ -74,7 +74,7 @@ void Cmissioncontrol::longRangeIR(uint16_t in)
 	free(tmp_base);
 }
 
-void Cmissioncontrol::mediumRangeIR(uint16_t in)
+void Cmissionconsole::mediumRangeIR(uint16_t in)
 {
 	char* tmp = (char*)calloc(64, sizeof(char));
 	char* tmp_base = tmp;

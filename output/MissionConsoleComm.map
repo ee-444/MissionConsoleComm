@@ -3,7 +3,7 @@ Archive member included because of file (symbol)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_exit.o)
                               c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5/crtm328p.o (exit)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_copy_data.o)
-                              MissionControl.o (__do_copy_data)
+                              MissionConsole.o (__do_copy_data)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_clear_bss.o)
                               main.o (__do_clear_bss)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_ctors.o)
@@ -13,13 +13,13 @@ c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\lib
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_tablejump.o)
                               c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_ctors.o) (__tablejump__)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
-                              MissionControl.o (calloc)
+                              MissionConsole.o (calloc)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(malloc.o)
                               c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o) (malloc)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(memset.o)
                               c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o) (memset)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                              MissionControl.o (sprintf)
+                              MissionConsole.o (sprintf)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
                               c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(sprintf.o) (vfprintf)
 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
@@ -57,7 +57,7 @@ Linker script and memory map
 Address of section .data set to 0x800100
 LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5/crtm328p.o
 LOAD main.o
-LOAD MissionControl.o
+LOAD MissionConsole.o
 LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a
 LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libm.a
 LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a
@@ -242,18 +242,18 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
                 0x000000bc                __vector_20
  .text          0x000000c0      0x14e main.o
                 0x000000c0                main
- .text          0x0000020e      0x34e MissionControl.o
-                0x0000020e                ArduinoLibrary::Cmissioncontrol::Cmissioncontrol()
-                0x0000023e                ArduinoLibrary::Cmissioncontrol::Cmissioncontrol()
-                0x0000026e                ArduinoLibrary::Cmissioncontrol::~Cmissioncontrol()
-                0x00000286                ArduinoLibrary::Cmissioncontrol::~Cmissioncontrol()
-                0x0000029e                ArduinoLibrary::Cmissioncontrol::enable()
-                0x000002c0                ArduinoLibrary::Cmissioncontrol::disable()
-                0x000002e0                ArduinoLibrary::Cmissioncontrol::write(unsigned char)
-                0x000002fe                ArduinoLibrary::Cmissioncontrol::write(char*)
-                0x0000036a                ArduinoLibrary::Cmissioncontrol::adValue(unsigned int)
-                0x00000410                ArduinoLibrary::Cmissioncontrol::longRangeIR(unsigned int)
-                0x000004b6                ArduinoLibrary::Cmissioncontrol::mediumRangeIR(unsigned int)
+ .text          0x0000020e      0x34e MissionConsole.o
+                0x0000020e                ArduinoLibrary::Cmissionconsole::Cmissionconsole()
+                0x0000023e                ArduinoLibrary::Cmissionconsole::Cmissionconsole()
+                0x0000026e                ArduinoLibrary::Cmissionconsole::~Cmissionconsole()
+                0x00000286                ArduinoLibrary::Cmissionconsole::~Cmissionconsole()
+                0x0000029e                ArduinoLibrary::Cmissionconsole::enable()
+                0x000002c0                ArduinoLibrary::Cmissionconsole::disable()
+                0x000002e0                ArduinoLibrary::Cmissionconsole::write(unsigned char)
+                0x000002fe                ArduinoLibrary::Cmissionconsole::write(char*)
+                0x0000036a                ArduinoLibrary::Cmissionconsole::adValue(unsigned int)
+                0x00000410                ArduinoLibrary::Cmissionconsole::longRangeIR(unsigned int)
+                0x000004b6                ArduinoLibrary::Cmissionconsole::mediumRangeIR(unsigned int)
  .text          0x0000055c        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_exit.o)
  .text          0x0000055c        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_copy_data.o)
  .text          0x0000055c        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_clear_bss.o)
@@ -347,7 +347,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
  *(.data)
  .data          0x00800100        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5/crtm328p.o
  .data          0x00800100        0x0 main.o
- .data          0x00800100       0x2e MissionControl.o
+ .data          0x00800100       0x2e MissionConsole.o
  .data          0x0080012e        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_exit.o)
  .data          0x0080012e        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_copy_data.o)
  .data          0x0080012e        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_clear_bss.o)
@@ -382,7 +382,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
  .bss           0x00800134        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5/crtm328p.o
  .bss           0x00800134        0x1 main.o
                 0x00800134                mission_console
- .bss           0x00800135        0x0 MissionControl.o
+ .bss           0x00800135        0x0 MissionConsole.o
  .bss           0x00800135        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_exit.o)
  .bss           0x00800135        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_copy_data.o)
  .bss           0x00800135        0x0 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr5\libgcc.a(_clear_bss.o)
@@ -480,7 +480,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
  .debug_aranges
                 0x00000000       0x20 main.o
  .debug_aranges
-                0x00000020       0x20 MissionControl.o
+                0x00000020       0x20 MissionConsole.o
  .debug_aranges
                 0x00000040       0x20 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
  .debug_aranges
@@ -498,7 +498,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
  .debug_pubnames
                 0x00000000       0x2f main.o
  .debug_pubnames
-                0x0000002f      0x228 MissionControl.o
+                0x0000002f      0x228 MissionConsole.o
  .debug_pubnames
                 0x00000257       0x1d c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
  .debug_pubnames
@@ -513,7 +513,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
 .debug_info     0x00000000      0xf5f
  *(.debug_info)
  .debug_info    0x00000000      0x25c main.o
- .debug_info    0x0000025c      0x3f4 MissionControl.o
+ .debug_info    0x0000025c      0x3f4 MissionConsole.o
  .debug_info    0x00000650       0x90 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
  .debug_info    0x000006e0      0x226 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(malloc.o)
  .debug_info    0x00000906      0x1af c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
@@ -524,7 +524,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
 .debug_abbrev   0x00000000      0x78b
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x140 main.o
- .debug_abbrev  0x00000140      0x162 MissionControl.o
+ .debug_abbrev  0x00000140      0x162 MissionConsole.o
  .debug_abbrev  0x000002a2       0x75 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
  .debug_abbrev  0x00000317      0x10d c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(malloc.o)
  .debug_abbrev  0x00000424       0xfd c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
@@ -534,7 +534,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
 .debug_line     0x00000000     0x1179
  *(.debug_line)
  .debug_line    0x00000000      0x1e2 main.o
- .debug_line    0x000001e2      0x2cc MissionControl.o
+ .debug_line    0x000001e2      0x2cc MissionConsole.o
  .debug_line    0x000004ae      0x133 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
  .debug_line    0x000005e1      0x33b c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(malloc.o)
  .debug_line    0x0000091c      0x1af c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
@@ -544,7 +544,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
 .debug_frame    0x00000000      0x1c0
  *(.debug_frame)
  .debug_frame   0x00000000       0x50 main.o
- .debug_frame   0x00000050       0xc0 MissionControl.o
+ .debug_frame   0x00000050       0xc0 MissionConsole.o
  .debug_frame   0x00000110       0x20 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
  .debug_frame   0x00000130       0x30 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(malloc.o)
  .debug_frame   0x00000160       0x20 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(sprintf.o)
@@ -555,7 +555,7 @@ LOAD c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/avr
  *(.debug_str)
  .debug_str     0x00000000      0x2cf main.o
                                 0x328 (size before relaxing)
- .debug_str     0x000002cf       0x35 MissionControl.o
+ .debug_str     0x000002cf       0x35 MissionConsole.o
                                 0x2a4 (size before relaxing)
  .debug_str     0x00000304       0x76 c:/program files/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.4.3/../../../../avr/lib/avr5\libc.a(calloc.o)
                                  0x8c (size before relaxing)
